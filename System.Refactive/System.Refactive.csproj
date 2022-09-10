@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PackageId>System.Refactive</PackageId>
+    <Product>System.Refactive</Product>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>Rx;Reactive;Extensions;Observable;LINQ;Events;RefObserver;Refactive;</PackageTags>
+    <Description>Reactive Extensions modified to be passed by reference</Description>
+    <Author>Scott Kane</Author>
+  </PropertyGroup>
+
+</Project>
