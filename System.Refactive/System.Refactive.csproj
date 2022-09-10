@@ -10,6 +10,7 @@
     <PackageTags>Rx;Reactive;Extensions;Observable;LINQ;Events;RefObserver;Refactive;</PackageTags>
     <Description>Reactive Extensions modified to be passed by reference</Description>
     <Author>Scott Kane</Author>
+    <RepositoryUrl>https://github.com/ScottKane/System.Refactive</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
