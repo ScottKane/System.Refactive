@@ -308,21 +308,23 @@ namespace System.Refactive.Linq
 
         #endregion
 
-        public virtual IRefObservable<TEventArgs> FromEvent<TEventArgs>(Action<RefAction<TEventArgs>> addHandler, Action<RefAction<TEventArgs>> removeHandler)
+        public virtual IRefObservable<TEventArgs> FromEvent<TEventArgs>(Action<Action<TEventArgs>> addHandler,
+            Action<Action<TEventArgs>> removeHandler)
         {
             return FromEvent_(addHandler, removeHandler, GetSchedulerForCurrentContext());
         }
 
-        public virtual IRefObservable<TEventArgs> FromEvent<TEventArgs>(Action<RefAction<TEventArgs>> addHandler, Action<RefAction<TEventArgs>> removeHandler, IScheduler scheduler)
+        public virtual IRefObservable<TEventArgs> FromEvent<TEventArgs>(Action<Action<TEventArgs>> addHandler,
+            Action<Action<TEventArgs>> removeHandler, IScheduler scheduler)
         {
             return FromEvent_(addHandler, removeHandler, scheduler);
         }
 
         #region Implementation
 
-        private static IRefObservable<TEventArgs> FromEvent_<TEventArgs>(Action<RefAction<TEventArgs>> addHandler, Action<RefAction<TEventArgs>> removeHandler, IScheduler scheduler)
+        private static IRefObservable<TEventArgs> FromEvent_<TEventArgs>(Action<Action<TEventArgs>> addHandler, Action<Action<TEventArgs>> removeHandler, IScheduler scheduler)
         {
-            return new FromEvent<RefAction<TEventArgs>, TEventArgs>(static h => h, addHandler, removeHandler, scheduler);
+            return new FromEvent<Action<TEventArgs>, TEventArgs>(static h => a => h(ref a), addHandler, removeHandler, scheduler);
         }
 
         #endregion

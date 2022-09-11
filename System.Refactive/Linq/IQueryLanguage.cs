@@ -449,8 +449,8 @@ namespace System.Refactive.Linq
         IRefObservable<TEventArgs> FromEvent<TDelegate, TEventArgs>(Func<RefAction<TEventArgs>, TDelegate> conversion, Action<TDelegate> addHandler, Action<TDelegate> removeHandler, IScheduler scheduler);
         IRefObservable<TEventArgs> FromEvent<TDelegate, TEventArgs>(Action<TDelegate> addHandler, Action<TDelegate> removeHandler);
         IRefObservable<TEventArgs> FromEvent<TDelegate, TEventArgs>(Action<TDelegate> addHandler, Action<TDelegate> removeHandler, IScheduler scheduler);
-        IRefObservable<TEventArgs> FromEvent<TEventArgs>(Action<RefAction<TEventArgs>> addHandler, Action<RefAction<TEventArgs>> removeHandler);
-        IRefObservable<TEventArgs> FromEvent<TEventArgs>(Action<RefAction<TEventArgs>> addHandler, Action<RefAction<TEventArgs>> removeHandler, IScheduler scheduler);
+        IRefObservable<TEventArgs> FromEvent<TEventArgs>(Action<Action<TEventArgs>> addHandler, Action<Action<TEventArgs>> removeHandler);
+        IRefObservable<TEventArgs> FromEvent<TEventArgs>(Action<Action<TEventArgs>> addHandler, Action<Action<TEventArgs>> removeHandler, IScheduler scheduler);
         IRefObservable<Unit> FromEvent(Action<Action> addHandler, Action<Action> removeHandler);
         IRefObservable<Unit> FromEvent(Action<Action> addHandler, Action<Action> removeHandler, IScheduler scheduler);
 

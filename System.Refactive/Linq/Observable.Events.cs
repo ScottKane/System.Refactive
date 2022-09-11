@@ -1326,7 +1326,7 @@ namespace System.Refactive.Linq
         /// </para>
         /// </remarks>
         /// <seealso cref="ToEvent"/>
-        public static IRefObservable<TEventArgs> FromEvent<TEventArgs>(Action<RefAction<TEventArgs>> addHandler, Action<RefAction<TEventArgs>> removeHandler)
+        public static IRefObservable<TEventArgs> FromEvent<TEventArgs>(Action<Action<TEventArgs>> addHandler, Action<Action<TEventArgs>> removeHandler)
         {
             if (addHandler == null)
             {
@@ -1367,7 +1367,7 @@ namespace System.Refactive.Linq
         /// </para>
         /// </remarks>
         /// <seealso cref="ToEvent"/>
-        public static IRefObservable<TEventArgs> FromEvent<TEventArgs>(Action<RefAction<TEventArgs>> addHandler, Action<RefAction<TEventArgs>> removeHandler, IScheduler scheduler)
+        public static IRefObservable<TEventArgs> FromEvent<TEventArgs>(Action<Action<TEventArgs>> addHandler, Action<Action<TEventArgs>> removeHandler, IScheduler scheduler)
         {
             if (addHandler == null)
             {
