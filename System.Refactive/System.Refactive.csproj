@@ -12,6 +12,7 @@
     <Author>Scott Kane</Author>
     <RepositoryUrl>https://github.com/ScottKane/System.Refactive</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>
